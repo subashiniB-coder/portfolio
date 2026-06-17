@@ -36,3 +36,22 @@ darkBtn.addEventListener("click", () => {
         darkBtn.innerHTML = "🌙 Dark Mode";
     }
 });
+const text = "Computer Science Student | Web Developer";
+let index = 0;
+
+function typeEffect() {
+    if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100);
+    }
+}
+console.log("Typing Animation Loaded");
+
+window.onload = typeEffect;
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
