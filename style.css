@@ -382,3 +382,16 @@ footer {
 .hero img:hover{
     box-shadow:0 0 30px #00ffcc;
 }
+.cert-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.cert-btn:hover{
+    background:#1d4ed8;
+}
