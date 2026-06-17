@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin:0;
     padding:0;
@@ -37,9 +40,13 @@ nav ul li a{
 }
 
 .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:80px 20px;
-    background:linear-gradient(to right,#2563eb,#1e40af);
+    background: linear-gradient(135deg,#6a11cb,#2575fc,#00c6ff);
     color:white;
 }
 
@@ -53,6 +60,9 @@ nav ul li a{
 .hero h1{
     margin-top:15px;
     font-size:40px;
+    color:#FFD700;
+    text-shadow:0 0 10px #FFD700,
+                0 0 20px #FFD700;
 }
 
 .hero button{
@@ -63,6 +73,10 @@ nav ul li a{
     color:#2563eb;
     cursor:pointer;
     border-radius:5px;
+}
+.hero button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffcc;
 }
 
 section{
@@ -280,4 +294,91 @@ footer {
 .dark-mode .certificate-card {
     background: #2c2c2c;
     color: white;
+}
+#typing{
+    color:#00ffcc;
+    font-weight:bold;
+    font-size:32px;
+    text-shadow:0 0 10px #00ffcc;
+}
+.hero img{
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.certificate-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00ffcc;
+}
+#topBtn{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+    border: none;
+    background: #ff3b3b;
+    color: black;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 12px;
+    box-shadow: 0 0 8px #ff3b3b;
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #ff3b3b;
+    transition: 0.3s;
+}
+.card{
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #ff3b3b;
+}
+.achievement-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.achievement-card{
+    width:280px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.achievement-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #00ffcc;
+}
+
+.achievement-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.dark-mode .achievement-card{
+    background:#2c2c2c;
+    color:white;
+}
+.hero img:hover{
+    box-shadow:0 0 30px #00ffcc;
 }
